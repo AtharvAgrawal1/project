@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Study Planner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="header">
+    <h1>📚 Study Planner</h1>
+    <div class="actions">
+      <input type="text" id="searchInput" placeholder="Search tasks..." />
+      <button id="toggleTheme">🌙 Theme</button>
+      <button id="addTaskBtn">➕ Add Task</button>
+    </div>
+  </div>
+
+  <div id="tasksContainer" class="task-grid"></div>
+
+  <!-- Modal -->
+  <div id="taskModal" class="modal">
+    <div class="modal-content">
+      <span class="closeBtn">&times;</span>
+      <h2>Add New Task</h2>
+      <form id="taskForm">
+        <input type="text" id="taskTitle" placeholder="Task Title" required />
+        <input type="date" id="taskDate" required />
+        <select id="taskPriority">
+          <option value="Low">Low Priority</option>
+          <option value="Medium">Medium Priority</option>
+          <option value="High">High Priority</option>
+        </select>
+        <input type="text" id="taskCategory" placeholder="Category (e.g. Math)" required />
+        <button type="submit">Add Task</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
