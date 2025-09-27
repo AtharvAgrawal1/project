@@ -1,4 +1,5 @@
 Author- Atharv Agrawal
+<br>
 📘 Study Planner – Your Personal Academic Assistant
 
 Study Planner is a modern, lightweight, and intuitive web application designed to help students organize their academic tasks and study goals effectively. Whether you’re juggling assignments, exam prep, or daily study targets, this planner empowers you to take charge of your time and boost your productivity with ease.
