@@ -1,0 +1,152 @@
+:root {
+  --bg-color: #f4f6f8;
+  --card-color: #ffffff;
+  --text-color: #333;
+  --primary: #007bff;
+  --success: #28a745;
+  --border: #ddd;
+}
+
+body.dark {
+  --bg-color: #1e1e1e;
+  --card-color: #2c2c2c;
+  --text-color: #f1f1f1;
+  --border: #444;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 14px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.task-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.task {
+  background: var(--card-color);
+  border: 1px solid var(--border);
+  padding: 15px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.task h3 {
+  margin: 0 0 5px;
+}
+
+.task small {
+  display: block;
+  margin-bottom: 10px;
+  color: gray;
+}
+
+.priority {
+  font-size: 13px;
+  padding: 3px 6px;
+  border-radius: 4px;
+  color: white;
+}
+
+.priority.Low {
+  background: #6c757d;
+}
+
+.priority.Medium {
+  background: #ffc107;
+  color: black;
+}
+
+.priority.High {
+  background: #dc3545;
+}
+
+.task .actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.task .progress-bar {
+  background: #e0e0e0;
+  height: 6px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.task .progress {
+  height: 100%;
+  background: var(--success);
+  width: 0%;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: var(--card-color);
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+}
+
+.closeBtn {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
